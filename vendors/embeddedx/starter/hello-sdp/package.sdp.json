@@ -1,0 +1,48 @@
+{
+  "packageType": "standardized_developer_package",
+  "packageVersion": "1.0.0",
+  "vendor": "EmbeddedX",
+  "board": "Starter Board",
+  "source": "EmbeddedX SDP Library",
+  "specUrl": "https://github.com/telespial/Standardized-Developer-Package-Specs",
+  "importRoot": "library/vendors/embeddedx/starter/hello-sdp",
+  "includes": {
+    "datasheets": true,
+    "schematics": false,
+    "netlists": false,
+    "bom": false,
+    "boardFiles": false,
+    "sampleCode": true,
+    "sdkNotes": true,
+    "mrd": false,
+    "mrc": false,
+    "validation": true
+  },
+  "referenceLinks": [],
+  "placeholders": [
+    {
+      "id": "placeholder-silicon-datasheet",
+      "componentType": "silicon",
+      "componentName": "Starter MCU",
+      "documentType": "datasheet",
+      "label": "Starter MCU - datasheet",
+      "treePath": null,
+      "required": true,
+      "notes": "Core SDP placeholder.",
+      "websiteUrl": "https://example.com/starter-mcu-datasheet",
+      "linkedPath": null
+    },
+    {
+      "id": "placeholder-sample-code",
+      "componentType": "sample-code",
+      "componentName": "Starter Demo",
+      "documentType": "sample-code",
+      "label": "Starter Demo - sample-code",
+      "treePath": null,
+      "required": false,
+      "notes": "Optional starter sample code.",
+      "websiteUrl": "https://github.com/telespial/EdgeAI_Smart_Pong_demo_Infineon_E8_Eval_Kit",
+      "linkedPath": null
+    }
+  ]
+}

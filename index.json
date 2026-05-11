@@ -1,5 +1,17 @@
 {
   "version": 1,
   "updatedAt": "2026-05-11T00:00:00Z",
-  "entries": []
+  "entries": [
+    {
+      "id": "embeddedx-starter-hello-sdp",
+      "vendor": "EmbeddedX",
+      "board": "Starter Board",
+      "sample": "Hello SDP",
+      "sdpUrl": "https://raw.githubusercontent.com/telespial/EmbeddedX-Standardized-Development-Package-Library/main/vendors/embeddedx/starter/hello-sdp/package.sdp.json",
+      "tags": [
+        "starter",
+        "sample-code"
+      ]
+    }
+  ]
 }
