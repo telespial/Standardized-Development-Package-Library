@@ -1,39 +1,59 @@
-# EmbeddedX Standardized Development Package Library
+# Standardized Development Package (SDP)
 
-Central catalog for published EmbeddedX Standardized Development Packages (SDP).
+Standardized Development Package (`SDP`) defines the hardware-and-firmware documentation contract for EmbeddedX development workflows.
 
-## Catalog File
+It standardizes how a semiconductor manufacturer or platform provider can publish a reusable board package that includes required engineering context for firmware and AI-assisted embedded development.
 
-The client imports from:
+An `SDP` package can include or reference:
+- silicon datasheets and reference manuals
+- register/programming references
+- board schematics and BOM/assembly references
+- peripheral/sensor/display/network component documentation
+- firmware sample-code entry points
+- SDK notes and validation guidance
 
-- `index.json`
+`SDP` is the package layer that sits between board-level hardware knowledge and AI-assisted firmware coding workflows.
 
-Schema:
+## v1 Goals
 
-- `version` (number)
-- `updatedAt` (UTC ISO timestamp)
-- `entries` (array)
+Version `1` of the package contract is optimized for practical bring-up and reuse:
+- establish required core documentation for each board family
+- define optional component placeholders for extension workflows
+- standardize source-link and local-file attachment patterns
+- support export/import portability across projects and teams
+- enable team-safe sharing of board context for AI-assisted coding
 
-Each entry should include:
+## Relationship To Other Specifications
 
-- `id` (stable slug)
-- `vendor`
-- `board`
-- `sample`
-- `sdpUrl` (raw GitHub URL to `.sdp.json`) and/or `bundleUrl` (GitHub URL to `.zip`)
-- optional `tags` (string array)
+- `Embedded-Intelligence-Package-Specs` — umbrella ecosystem reference
+- `EIP` — embedded intelligence/model package contract
+- `MRD` / `MRC` / `MDP` — complementary structure and model contracts
+- `EmbeddedX Client` — UI import/export and workflow consumption
+- `EmbeddedX Server` — policy, orchestration, and future server-authoritative SDP logic
 
-## Recommended Repo Layout
+`SDP` covers board, silicon, and component documentation context.
+`EIP` covers model/runtime packaging context.
+Both are intended to interoperate in one end-to-end embedded workflow.
 
-- `vendors/<vendor>/<board>/<sample>/package.sdp.json`
-- `vendors/<vendor>/<board>/<sample>/bundle.zip`
+## Repository Layout
 
-## Publishing Workflow
+- `index.json` — machine-readable catalog used by EmbeddedX catalog import
+- `vendors/<vendor>/<board>/<sample>/package.sdp.json` — package manifests
+- `vendors/<vendor>/<board>/<sample>/README.md` — package-specific usage and component overview
 
-1. Export from EmbeddedX Client:
-   - Framework Only (`.sdp.json`) and optionally
-   - Library and Framework (`.zip`)
-2. Commit files under `vendors/...`
-3. Add/refresh corresponding `entries[]` in `index.json`
-4. Update `updatedAt`
-5. Commit and push
+## v1 Core Rules
+
+An `SDP` package must:
+- declare `packageType: standardized_developer_package`
+- describe board/vendor/import-root metadata
+- define `includes` capability flags
+- define placeholders for required and optional documentation artifacts
+- allow reference links and local-path linkage during project execution
+
+## Why SDP Matters
+
+`SDP` provides a standardized mechanism for semiconductor manufacturers and platform teams to deliver complete board-development context in one portable package.
+
+It also allows end users to configure, save, and share board-specific documentation and component mappings for use with AI-assisted firmware coding systems.
+
+This reduces repeated setup work, improves consistency, and accelerates project bring-up across teams.

@@ -1,25 +1,33 @@
-# Hello SDP (Starter)
+# Standardized Development Package (SDP): EmbeddedX Starter Hello SDP
 
-## Function
+EmbeddedX Starter Hello `SDP` is a minimal reference package used to validate catalog import and baseline Docs/SDP workflows.
 
-Starter SDP used to validate client catalog import and baseline Docs/SDP flows.
+It demonstrates the same standard packaging model used for semiconductor and board-specific SDP deliveries.
 
-## Dev Kit
+## Package Summary
 
-- Vendor: EmbeddedX
-- Board: Starter Board
-- Package version: 1.0.0
+- Vendor: `EmbeddedX`
+- Board: `Starter Board`
+- Package version: `1.0.0`
 
-## Components Used
+## v1 Goals For This Package
 
-- Silicon: Starter MCU
-- Sample Code: Starter Demo
+- provide a compact SDP for smoke-test and onboarding flows
+- verify required/optional placeholder handling in client workflows
+- validate catalog-based SDP discovery and import
 
-## Overview
+## Component Overview
 
-- Lightweight starter package intended for smoke tests.
-- Includes one required silicon datasheet placeholder and one optional sample-code placeholder.
+- Silicon:
+  - Starter MCU
+- Sample code:
+  - Starter Demo
+
+## AI-Assisted Workflow Value
+
+- demonstrates how SDP packages carry board-context metadata for AI-assisted firmware workflows
+- serves as a template for creating and sharing project-specific board context
 
 ## Files
 
-- `package.sdp.json`: Primary SDP manifest.
+- `package.sdp.json` — canonical SDP manifest.

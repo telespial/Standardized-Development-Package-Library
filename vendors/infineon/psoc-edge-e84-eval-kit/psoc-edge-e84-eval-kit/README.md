@@ -1,24 +1,33 @@
-# PSoC Edge E84 Eval Kit SDP
+# Standardized Development Package (SDP): Infineon PSoC Edge E84 Eval Kit
 
-## Function
+Infineon PSoC Edge E84 Eval Kit `SDP` defines a standardized board package for EmbeddedX firmware and AI-assisted development workflows.
 
-Standardized Development Package (SDP) scaffold for Infineon PSoC Edge E84 evaluation workflows in EmbeddedX.
+It captures required hardware/firmware documentation and optional component references in one reusable manifest so teams can import, maintain, and share board context consistently.
 
-This package provides a structured documentation and sample-code placeholder map so teams can:
+## Package Summary
 
-- track required silicon docs (datasheet + reference manual),
-- attach board/component collateral over time,
-- keep reusable reference links with the package,
-- and bootstrap sample-code linkage for EdgeAI demo flows.
-
-## Dev Kit
-
-- Vendor: Infineon
-- Board: PSoC Edge E84 Eval Kit
-- Package version: 0.1
+- Vendor: `Infineon`
+- Board: `PSoC Edge E84 Eval Kit`
+- Package version: `0.1`
 - Import root: `library/vendors/infineon/psoc-edge-e84-eval-kit`
+- Spec URL: `https://github.com/telespial/Standardized-Developer-Package-Specs`
 
-## Components Used
+## v1 Goals For This Package
+
+- establish minimum required silicon docs for safe bring-up
+- provide optional placeholders for board and component expansion
+- include sample-code placeholders for AI-assisted coding flows
+- support team portability through import/export workflows
+
+## Documentation Scope Covered
+
+This SDP includes or references:
+- silicon docs: datasheet, reference-manual, register/programming references
+- board docs: user-guide, quick-start, release-notes, schematic, BOM/assembly references
+- component docs: sensor/audio/network/display placeholders
+- sample code placeholders and reference links
+
+## Component Overview
 
 - Board:
   - KIT_PSE84_EVAL base board
@@ -38,22 +47,33 @@ This package provides a structured documentation and sample-code placeholder map
   - Waveshare 4.3-inch DSI + FT5406
   - Waveshare 7.0-inch DSI + GT911
   - EK79007AD3 10.1-inch TFT + ILI2511
-- Sample Code:
+- Sample code:
   - EdgeAI Smart Pong Demo
 
-## Overview
+## Package Metrics
 
-- Total placeholders: 39
-- Required placeholders: 2
-- Reference links: 1
-- Includes flags enabled in this SDP:
-  - datasheets
-  - schematics
-  - bom
-  - sampleCode
-  - sdkNotes
-  - validation
+- Total placeholders: `39`
+- Required placeholders: `2`
+- Reference links: `1`
+
+Includes enabled:
+- datasheets
+- schematics
+- bom
+- sampleCode
+- sdkNotes
+- validation
+
+## AI-Assisted Workflow Value
+
+For semiconductor and platform delivery:
+- standardizes required board-development artifacts in one package
+- reduces ambiguity in firmware bring-up requirements
+
+For end users and teams:
+- supports configuring, saving, and sharing board-specific documentation and component context
+- improves repeatability for AI-assisted firmware coding systems
 
 ## Files
 
-- `package.sdp.json`: Primary SDP manifest for import/export.
+- `package.sdp.json` — canonical SDP manifest for import/export.
