@@ -12,6 +12,20 @@
         "starter",
         "sample-code"
       ]
+    },
+    {
+      "id": "infineon-psoc-edge-e84-eval-kit",
+      "vendor": "Infineon",
+      "board": "PSoC Edge E84 Eval Kit",
+      "sample": "PSoC Edge E84 Eval Kit Base SDP",
+      "sdpUrl": "https://raw.githubusercontent.com/telespial/EmbeddedX-Standardized-Development-Package-Library/main/vendors/infineon/psoc-edge-e84-eval-kit/psoc-edge-e84-eval-kit/package.sdp.json",
+      "tags": [
+        "infineon",
+        "psoc-edge",
+        "e84",
+        "eval-kit",
+        "sdp"
+      ]
     }
   ]
 }
